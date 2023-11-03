@@ -1,0 +1,81 @@
+<!--<mat-spinner *ngIf="isLoading"></mat-spinner>
+<mat-accordion multi="true" *ngIf="posts.length > 0 && !isLoading">
+  <mat-expansion-panel *ngFor="let post of posts">
+    <mat-expansion-panel-header>
+      {{ post.title }}
+    </mat-expansion-panel-header>
+    <p>{{ post.content }}</p>
+    <mat-action-row *ngIf="userIsAuthenticated && userId === post.creator">
+      <a mat-button color="primary" [routerLink]="['/edit', post.id]">EDIT</a>
+      <button mat-button color="warn" (click)="onDelete(post.id)">DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<mat-paginator [length]="totalPosts" [pageSize]="postsPerPage" [pageSizeOptions]="pageSizeOptions" (page)="onChangedPage($event)" *ngIf="posts.length > 0"></mat-paginator>
+<p class="info-text mat-body-1" *ngIf="posts.length <= 0 && !isLoading">No posts added yet!</p> -->
+
+<div class="form">
+
+<p align="center">
+  <iframe src="https://i.simmer.io/@iaften/dream-house" style="width:960px;height:600px;border:0"></iframe>
+</p>
+
+<div class="backgroundcomment">
+<div class="comments">
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<mat-accordion multi="true" *ngIf="posts.length > 0 && !isLoading">,
+  <mat-card *ngFor="let post of posts">
+    <mat-card-header>
+      <mat-card-subtitle>
+        {{ post.title }}:
+      </mat-card-subtitle>
+
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ post.content }}</p>
+    </mat-card-content>
+
+    <mat-action-row *ngIf="userIsAuthenticated && userId === post.creator">
+      <a mat-button color="primary" [routerLink]="['/edit', post.id]">EDIT</a>
+      <button mat-button color="warn" (click)="onDelete(post.id)">DELETE</button>
+    </mat-action-row>
+  </mat-card>
+
+
+  
+</mat-accordion>
+<button
+      mat-raised-button
+      color="accent" [routerLink]="['/create']"
+      >Create Post</button>
+<mat-card id="pagei">
+<mat-paginator [length]="totalPosts" [pageSize]="postsPerPage" [pageSizeOptions]="pageSizeOptions" (page)="onChangedPage($event)" *ngIf="posts.length > 0"></mat-paginator>
+<p class="info-text mat-body-1" *ngIf="posts.length <= 0 && !isLoading">No posts added yet!</p>
+</mat-card>
+
+</div>
+
+</div>
+
+</div>
+
+<app-footer></app-footer>
+
+<br>
+
+<!-- <form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Name</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Leave a comment</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+</form>
+<button
+mat-raised-button
+color="accent"
+type="submit">Post Comment</button>
+-->

@@ -1,0 +1,41 @@
+<div class="back">
+<div class="center">
+  <h1>Create post</h1>
+  <mat-card>
+  <form (submit)="onSavePost(postForm)" #postForm="ngForm" *ngIf="!isLoading">
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          type="text"
+          name="title"
+          pattern="[A-Åa-å\sÀ-ž]{2,}$"
+          [ngModel]="post?.title"
+          required
+          minlength="2"
+          placeholder="Name"
+          #title="ngModel">
+        <mat-error *ngIf="title.invalid">Please enter a valid name.</mat-error>
+      </mat-form-field>
+    <mat-form-field example-full-width>
+      <textarea
+        matInput
+        rows="4"
+        name="content"
+        [ngModel]="post?.content"
+        required
+        placeholder="Comment"
+        #content="ngModel"></textarea>
+      <mat-error *ngIf="content.invalid">Please enter a post.</mat-error>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit">Post</button>
+  </form>
+
+</mat-card>
+</div>
+
+
+
+</div> 
