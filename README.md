@@ -1,7 +1,4 @@
-# MEANStackWebsite
- Promotional website of a self-made game using MEAN stack technologies.
-
- <h1 align="center">Promotional website using MEAN stack technologies.</h1>
+<h1 align="center">Promotional website using MEAN stack technologies</h1>
 
 <h2 align="center">
 
@@ -31,14 +28,16 @@ This project from 2020 served as a way of learning and utilizing the MEAN stack 
 
 * RESTful API
 * User registration and login
-<p align="center">
+<p align="left">
 <img src="https://github.com/jonasvalvik/MEANStackWebsite/assets/6436680/c7ad2249-38fb-4b29-8574-83fdd8967ed8" alt="login" width="420">
 </p>
 
 * User authentication and authorization
-
+     - JSON web tokens stored locally to keep track of session.
+     - Protection of certain routes i.e. only the specific logged in user can edit their own posts.
+ 
 * Creation, editing, and deleting of posts
-<p align="center">
+<p align="left">
 <img src="https://github.com/jonasvalvik/MEANStackWebsite/assets/6436680/0e27b851-d888-4d5f-9527-018040c2a947" alt="login" width="420">
 </p>
 
